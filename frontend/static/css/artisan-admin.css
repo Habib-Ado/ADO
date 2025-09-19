@@ -1,0 +1,609 @@
+/* ========================================
+   STILI PAGINE ARTIGIANO E AMMINISTRAZIONE
+   ======================================== */
+
+/* Container principale */
+.artisan-request-container,
+.admin-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem 1rem;
+}
+
+/* Card principale */
+.artisan-request-card,
+.admin-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+.artisan-request-header,
+.admin-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.artisan-request-header h1,
+.admin-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.artisan-request-header p,
+.admin-header p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Contenuto */
+.artisan-request-content {
+    padding: 2rem;
+}
+
+/* Sezioni informative */
+.info-section,
+.requests-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border-left: 4px solid #667eea;
+}
+
+.info-section h3,
+.requests-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-section li {
+    padding: 0.5rem 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.info-section li i {
+    color: #28a745;
+}
+
+/* Sezione richiesta */
+.request-section {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border: 2px dashed #667eea;
+}
+
+.request-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.request-section p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Pulsante richiesta */
+.request-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.request-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.request-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Sezione stato */
+.status-section {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.status-card {
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid;
+}
+
+.status-card.pending {
+    background: #fff3cd;
+    border-left-color: #ffc107;
+}
+
+.status-card.approved {
+    background: #d4edda;
+    border-left-color: #28a745;
+}
+
+.status-card.rejected {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+}
+
+.status-header {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.status-details p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+/* Footer */
+.artisan-request-footer {
+    padding: 1.5rem 2rem;
+    background: #f8f9fa;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+}
+
+.back-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #764ba2;
+}
+
+/* Feedback */
+.request-feedback,
+.admin-feedback {
+    display: none;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.request-feedback.success,
+.admin-feedback.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.request-feedback.error,
+.admin-feedback.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Stili per l'amministrazione */
+.admin-content {
+    padding: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.refresh-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+    background: #764ba2;
+}
+
+.refresh-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Lista richieste */
+.requests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.request-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.request-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.user-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.user-email {
+    color: #666;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.request-date {
+    color: #888;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.request-status {
+    text-align: right;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.request-status.pending .status-badge {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.request-status.approved .status-badge {
+    background: #d4edda;
+    color: #155724;
+}
+
+.request-status.rejected .status-badge {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Azioni richiesta */
+.request-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.btn-approve,
+.btn-reject {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-approve {
+    background: #28a745;
+    color: white;
+}
+
+.btn-approve:hover {
+    background: #218838;
+}
+
+.btn-reject {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-reject:hover {
+    background: #c82333;
+}
+
+.btn-approve:disabled,
+.btn-reject:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Richiesta processata */
+.request-processed {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #6c757d;
+}
+
+.request-processed p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+/* Stati vuoti e caricamento */
+.empty-state,
+.loading-spinner {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #666;
+}
+
+.loading-spinner i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+/* Informazioni ruolo */
+.role-info {
+    background: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 10px;
+    padding: 1rem;
+    color: #1565c0;
+}
+
+.role-info strong {
+    color: #0d47a1;
+}
+
+.role-info small {
+    color: #1976d2;
+}
+
+/* Stili per la gestione utenti */
+.users-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border-left: 4px solid #667eea;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.users-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.user-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.user-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.user-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.user-email {
+    color: #666;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.user-date {
+    color: #888;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.user-status {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.status-badge,
+.role-badge,
+.verified-badge,
+.unverified-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.status-badge.active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.blocked {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.role-badge.cliente {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.role-badge.artigiano {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+.role-badge.admin {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.verified-badge {
+    background: #d4edda;
+    color: #155724;
+}
+
+.unverified-badge {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.user-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.btn-block,
+.btn-unblock,
+.btn-delete {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-block {
+    background: #ffc107;
+    color: #212529;
+}
+
+.btn-block:hover {
+    background: #e0a800;
+}
+
+.btn-unblock {
+    background: #28a745;
+    color: white;
+}
+
+.btn-unblock:hover {
+    background: #218838;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #c82333;
+}
+
+.btn-block:disabled,
+.btn-unblock:disabled,
+.btn-delete:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .artisan-request-container,
+    .admin-container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .artisan-request-header h1,
+    .admin-header h1 {
+        font-size: 2rem;
+    }
+    
+    .artisan-request-content,
+    .admin-content {
+        padding: 1rem;
+    }
+    
+    .request-header,
+    .user-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .request-actions,
+    .user-actions {
+        justify-content: center;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .header-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .user-status {
+        text-align: left;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+} 

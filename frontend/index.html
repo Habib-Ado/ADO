@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="/static/img/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Artigianato Onligne - Scopri l'Artigianato Locale">
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+            <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="/static/css/auth.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+    <link rel="stylesheet" href="/static/css/artisan-admin.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <title>Artigianato Onligne</title>
+        
+
+        <script type="module" src="/static/js/index.js"></script>
+    </head>
+    <body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/" data-link>
+                <i class="fas fa-palette me-2"></i>Artigianato Online
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+
+                <!--
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/" data-link>
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/prodotti" data-link>
+                            <i class="fas fa-store me-1"></i>Prodotti
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart" data-link>
+                            <i class="fas fa-shopping-cart me-1"></i>Carrello
+                            <span class="badge bg-primary ms-1" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="dropdown me-3" id="user-menu" style="display: none;">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-1"></i>
+                            <span id="user-name">Utente</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/profile" data-link">
+                                <i class="fas fa-user-cog me-2"></i>Il mio Profilo
+                            </a></li>
+                            <li><a class="dropdown-item" href="/dashboard" data-link">
+                                <i class="fas fa-tachometer-alt me-2"></i>Il mio Dashboard
+                            </a></li>
+                            <li><a class="dropdown-item" href="/artisan-request" data-link id="artisan-request-link" style="display: none;">
+                                <i class="fas fa-hands-helping me-2"></i>Diventa Artigiano
+                            </a></li>
+                            <li><a class="dropdown-item" href="/admin" data-link id="admin-link" style="display: none;">
+                                <i class="fas fa-cog me-2"></i>Amministrazione
+                            </a></li>
+                            <li><a class="dropdown-item" href="/admin/artisan-requests" data-link id="admin-artisan-requests-link" style="display: none;">
+                                <i class="fas fa-users-cog me-2"></i>Gestione Richieste Artigiani
+                            </a></li>
+                            <li><a class="dropdown-item" href="/admin/users" data-link id="admin-users-link" style="display: none;">
+                                <i class="fas fa-users me-2"></i>Gestione Utenti
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="logout-btn">
+                                <i class="fas fa-sign-out-alt me-2"></i>Logout
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div id="auth-buttons">
+                        <a href="/login" data-link id="btnLogin" class="btn btn-outline-light me-2">
+                            <i class="fas fa-sign-in-alt me-1"></i>Login
+                        </a>
+                        <a href="/register" data-link id="btnRegister" class="btn btn-primary">
+                            <i class="fas fa-user-plus me-1"></i>Registrazione
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <div id="app" class="container" style="flex: 1;"></div>
+        
+        <!-- Footer -->
+        <footer class="footer mt-auto py-3 bg-dark text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-2">
+                        <h5 class="mb-2">
+                            <i class="fas fa-palette me-2"></i>Artigianato Online
+                        </h5>
+                        <p class="text-muted small">
+                            Scopri e acquista creazioni artigianali uniche direttamente dagli artigiani locali. 
+                            Supporta l'artigianato tradizionale e scopri pezzi unici con una storia da raccontare.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-2">
+                        <h6 class="mb-2">Navigazione</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="/" class="text-muted text-decoration-none" data-link>Home</a></li>
+                            <li><a href="/prodotti" class="text-muted text-decoration-none" data-link>Prodotti</a></li>
+                            <li><a href="/artigiani" class="text-muted text-decoration-none" data-link>Artigiani</a></li>
+                            <li><a href="/about" class="text-muted text-decoration-none" data-link>Chi Siamo</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-2">
+                        <h6 class="mb-2">Account</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="/login" class="text-muted text-decoration-none" data-link>Accedi</a></li>
+                            <li><a href="/register" class="text-muted text-decoration-none" data-link>Registrati</a></li>
+                            <li><a href="/profile" class="text-muted text-decoration-none" data-link>Profilo</a></li>
+                            <li><a href="/cart" class="text-muted text-decoration-none" data-link>Carrello</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-2">
+                        <h6 class="mb-2">Contatti</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-1">
+                                <i class="fas fa-map-marker-alt me-2"></i>
+                                Via Roma 123, Milano, Italia
+                            </li>
+                            <li class="mb-1">
+                                <i class="fas fa-phone me-2"></i>
+                                +39 02 1234567
+                            </li>
+                            <li class="mb-1">
+                                <i class="fas fa-envelope me-2"></i>
+                                info@artigianato-online.it
+                            </li>
+                            <li class="mb-1">
+                                <i class="fas fa-clock me-2"></i>
+                                Lun-Ven: 9:00-18:00
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="my-2">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0 text-muted">
+                            © 2024 Artigianato on Ligne. Tutti i diritti riservati.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="/privacy" class="text-muted text-decoration-none me-3" data-link>Privacy Policy</a>
+                        <a href="/terms" class="text-muted text-decoration-none me-3" data-link>Termini di Servizio</a>
+                        <a href="/cookies" class="text-muted text-decoration-none" data-link>Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script type="module" src="/static/js/index.js"></script>
+        <script type="module" src="/static/js/bootstrap.bundle.min.js"></script>
+        <script type="module" src="/static/js/jquery.js"></script>
+        <script src="/static/js/userInterface.js"></script>
+    </body>
+</html>
